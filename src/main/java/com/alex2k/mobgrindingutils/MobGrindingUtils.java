@@ -1,5 +1,6 @@
 package com.alex2k.mobgrindingutils;
 
+import com.alex2k.mobgrindingutils.item.ModItemGroup;
 import com.alex2k.mobgrindingutils.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -12,7 +13,7 @@ public class MobGrindingUtils implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItemGroup.registerItemGroups();
 		ModItems.registerModItems();
 	}
 }

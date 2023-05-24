@@ -1,5 +1,7 @@
 {
   "item.mobgrindingutils.fan_width_upgrade": "Fan Upgrade: Width",
   "item.mobgrindingutils.fan_height_upgrade": "Fan Upgrade: Height",
-  "item.mobgrindingutils.fan_speed_upgrade": "Fan Upgrade: Speed"
+  "item.mobgrindingutils.fan_range_upgrade": "Fan Upgrade: Range",
+
+  "itemgroup.mgu": "Mob Grinding Utils"
 }

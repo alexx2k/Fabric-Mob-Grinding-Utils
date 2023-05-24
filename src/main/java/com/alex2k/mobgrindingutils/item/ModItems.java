@@ -25,8 +25,12 @@ public class ModItems {
 
     public static void addItemsToItemGroup() {
         addToItemGroup(ItemGroups.FUNCTIONAL, FAN_WIDTH_UPGRADE);
+        addToItemGroup(ModItemGroup.MOBGRINDINGUTILS, FAN_WIDTH_UPGRADE);
         addToItemGroup(ItemGroups.FUNCTIONAL, FAN_HEIGHT_UPGRADE);
+        addToItemGroup(ModItemGroup.MOBGRINDINGUTILS, FAN_HEIGHT_UPGRADE);
         addToItemGroup(ItemGroups.FUNCTIONAL, FAN_RANGE_UPGRADE);
+        addToItemGroup(ModItemGroup.MOBGRINDINGUTILS, FAN_RANGE_UPGRADE);
+
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {
