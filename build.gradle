@@ -43,15 +43,6 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	include modApi('teamreborn:energy:2.3.0') {
-		exclude(group: "net.fabricmc.fabric-api")
-	}
-
-	modImplementation  ("curse.maven:reborncore-237903:4142164")
-	modImplementation  ("curse.maven:techreborn-233564:4142163")
-
-	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.19.3:4.0.3'
-
 	// Uncomment the following line to enable the deprecated Fabric API modules.
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
@@ -71,18 +62,19 @@ def dataOutput = 'src/main/generated'
 loom {
 	runs {
 		datagen {
-			server()
+			inherit server
 
 			name "Data Generation"
 			vmArg "-Dfabric-api.datagen"
-			vmArg "-Dfabric-api.datagen.output-dir=${file(dataOutput)}"
+			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+			vmArg "-Dfabric-api.datagen.modid=mobgrindingutils"
 
 			runDir "build/datagen"
 		}
 	}
 }
 
-sourceSets { main { resources { srcDirs += dataOutput } } }
+sourceSets { main { resources { srcDirs += ['src/main/generated'] } } }
 
 tasks.withType(JavaCompile).configureEach {
 	// Minecraft 1.18 (1.18-pre2) upwards uses Java 17.

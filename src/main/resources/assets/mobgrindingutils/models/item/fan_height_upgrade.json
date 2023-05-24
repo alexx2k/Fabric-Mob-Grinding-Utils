@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mobgrindingutils:item/fan_upgrade_height"
+  }
+
+}
